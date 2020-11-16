@@ -1,0 +1,33 @@
+{% extends 'userbase.html' %}
+{% load static %}
+
+{% block contents %}
+<br><br><br><br><br><br><br>
+<!-- <section id="intro" > -->
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+            <br><br><br><br><br><br><h1 style="font-size:50px"><b>Welcome back </b><span><li class="d-none d-lg-block">
+                                    <a class="btn_2" style="color:#D47979" href="{% url 'userpage' %}">{{request.session.name}}</a>
+                                </li></span></h1>
+        </div>
+		
+		
+
+
+
+        <div class="col-md-4 work31 order-md-last order-first">
+		<br>
+		<br>
+          <img src="{% static 'img/work31.svg' %}" alt="" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </section><!-- #intro -->
+<style>
+transition: 10s;
+</style>
+
+
+{% endblock %}

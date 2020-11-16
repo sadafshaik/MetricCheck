@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contents %}
+
+<section id="intro" class="clearfix">
+
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+            <h2 style="color:#A6E7FX">ADMIN LOGIN</h2>
+                            <form action="/adminloginentered/" method="POST">
+                                    {% csrf_token %}
+									<div class="container">
+    <input type="text" placeholder="Enter Username" name="uname" required> <br />
+
+    <input type="password" placeholder="Enter Password" name="upass" required>
+	<br>
+	<button class="button button1">Login</button>
+	</form>
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <font color='darkred'> {{ message }}</font>
+                                {% endfor %}
+                            {% endif %}
+	</div>
+	 </div>
+
+        <div class="col-md-6 mobilelogin order-md-last order-first">
+          <img src="{% static 'img/mobilelogin.svg' %}" alt="" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </section><!-- #intro -->
+	
+	
+	
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<style>
+
+input[type=text], input[type=password] {
+  
+  padding: 5px 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 50%;
+  
+}
+body {
+  background-color: lightwhite;
+}
+
+
+button {
+  background-color:#A6E7FX;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 3px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 50%;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  width: 50;%;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+</style>
+</head>
+</html>
+                            
+       
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'userbase.html' %}
+{% load static %}
+
+{% block contents %}
+
+<section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+            <h2 style="color:white">welcome to file data </h2>
+                            <table border="2px solid blue">
+                               <tr>
+
+                                            <th style="color: darkblue">fileName</th>
+                                            <th style="color:darkblue">Loc</th>
+                                            <th style="color:darkblue">word count of file</th>
+                                            <th style="color:darkblue">charecters count of file</th>
+                                            <th style="color:darkblue">number of functions</th>
+                                            <th style="color:darkblue">commentlines count of file</th>
+                                            <th style="color:darkblue">last-modified time of file</th>
+                                            <th style="color:darkblue">last-accessed time of file</th>
+                                            <th style="color:darkblue">classes count  of file</th>
+                                            <th style="color:darkblue">size of file in bytes</th>
+                                            <th style="color:darkblue">if loop count  of file</th>
+                                            <th style="color:darkblue">elif loop count  of file</th>
+                                            <th style="color:darkblue">else loop count  of file</th>
+                                            <th style="color:darkblue">for loop count  of file</th>
+                                            <th style="color:darkblue">cyclomatic complexity count of file</th>
+                                            <th style="color:darkblue">cyclomatic complexity rank of file</th>
+                                            <th style="color:darkblue">cyclomatic complexity of file</th>
+                                        </tr>
+
+                            <tr>
+                                <td style="color:white">{{message.filename}}</td>
+                                <td style="color:white">{{message.lines}}</td>
+                                <td style="color:white">{{message.words}}</td>
+                                <td style="color:white">{{message.charecters}}</td>
+                                <td style="color:white">{{message.functionscount}}</td>
+                                <td style="color:white">{{message.commentlinescount}}</td>
+                                <td style="color:white">{{message.lastmodifiedtime}}</td>
+                                <td style="color:white">{{message.lastaccessedtime}}</td>
+                                <td style="color:white">{{message.classescount}}</td>
+                                <td style="color:white">{{message.filesize}}</td>
+                                <td style="color:white">{{message.ifloop}}</td>
+                                <td style="color:white">{{message.elifloop}}</td>
+                                <td style="color:black">{{message.elseloop}}</td>
+                                <td style="color:black">{{message.forloop}}</td>
+                                <td style="color:black">{{message.cmplx}}</td>
+                                <td style="color:black">{{message.rank}}</td>
+                                <td style="color:black">{{message.perf}}</td>
+
+                            </tr>
+                            </table>
+<!--          <h6>Artificial Intelligence in Prediction of PostMortem Interval (PMI)<br>Through Blood Biomarkers in Forensic Examination <span>-A Concept</span></h6>-->
+          <!--<div>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+          </div>-->
+        </div>
+
+<!--        <div class="col-md-6 intro-img order-md-last order-first">-->
+<!--          <img src="{% static 'img/intro-img.svg' %}" alt="" class="img-fluid">-->
+<!--        </div>-->
+      </div>
+
+    </div>
+  </section><!-- #intro -->
+
+{% endblock %}

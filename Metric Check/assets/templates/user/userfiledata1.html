@@ -1,0 +1,265 @@
+{% extends 'userbase.html' %}
+{% load static %}
+
+{% block contents %}
+<!--<section id="intro" class="clearfix">-->
+<!--    <div class="container d-flex h-100">-->
+                          
+
+
+
+      <!-- </div> -->
+<br><br><br><br>
+<br><br><br>
+
+
+
+      </div>
+    </section>
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-6"><h2>Metrics</h2></div>
+                <div class="col-sm-6">
+                    <div class="btn-group" data-toggle="buttons">
+                             
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover">
+            <!--  -->
+							   <!-- <tr><td style="color:darkblue">ID</td> <td style="color:black">{{message.id}}</td></tr> -->
+							   <tr><td style="color: darkblue"><b>fileName</td> <td style="color:black"><b>{{message.filename}}</td> </tr>
+                               <tr><td style="color:darkblue"><b>Lines count of file</td> <td style="color:black"><b>{{message.lines}}</td></tr>
+							   <tr><td style="color:darkblue"><b>Logical Lines Of Code</td> <td style="color:black"><b>{{message.lloc}}</td></tr>
+							   
+							   <tr><td style="color:darkblue"><b>SLOC</td> <td style="color:black"><b>{{message.sloc}}</td></tr>
+							   <tr><td style="color:darkblue"><b>Comments</td> <td style="color:black"><b>{{message.comments}}</td></tr>
+							   <tr><td style="color:darkblue"><b>Multiline strings</td> <td style="color:black"><b>{{message.multi}}</td></tr>
+							   <tr><td style="color:darkblue"><b>Single line strings</td> <td style="color:black"><b>{{message.single_comments}}</td></tr>
+                               <tr> <td style="color:darkblue"><b>Number of words</td>  <td style="color:black"><b>{{message.words}}</td></tr>
+                               <tr> <td style="color:darkblue"><b>Number of Characters</td><td style="color:black"><b>{{message.characters}}</td> </tr>
+                               <tr> <td style="color:darkblue"><b>Number of functions</td> <td style="color:black"><b>{{message.functionscount}}</td></tr>
+                               <!-- <tr><td style="color:darkblue">commentlines count of file</td> <td style="color:black">{{message.commentlinescount}}</td></tr> -->
+                               <tr><td style="color:darkblue"><b>last-modified time of file</td><td style="color:black"><b>{{message.lastmodifiedtime}}</td> </tr>
+                               <tr><td style="color:darkblue"><b>last-accessed time of file</td> <td style="color:black"><b>{{message.lastaccessedtime}}</td></tr>
+                               <tr> <td style="color:darkblue"><b>Number of Classes</td> <td style="color:black"><b>{{message.classescount}}</td></tr>
+                               <tr> <td style="color:darkblue"><b>File Size in bytes</td><td style="color:black"><b>{{message.filesize}}</td> </tr>
+                               <tr><td style="color:darkblue"><b>if loops</td> <td style="color:black"><b>{{message.ifloop}}</td></tr>
+                               <tr><td style="color:darkblue"><b>elif loops</td><td style="color:black"><b>{{message.elifloop}}</td> </tr>
+                               <tr> <td style="color:darkblue"><b>else loops</td><td style="color:black"><b>{{message.elseloop}}</td> </tr>
+                               <tr><td style="color:darkblue"><b>while loops</td><td style="color:black"><b>{{message.whileloop}}</td> </tr>
+                               <tr><td style="color:darkblue"><b>for loops </td> <td style="color:black"><b>{{message.forloop}}</td></tr>
+                               <tr><td style="color:darkblue"><b>except</td> <td style="color:black"><b>{{message.countexcept}}</td> </tr>
+                               <tr><td style="color:darkblue"><b>finally</td> <td style="color:black"><b>{{message.countfinally}}</td></tr>
+                               <!-- <tr><td style="color:darkblue">cyclomatic complexity count of file</td> <td style="color:red">{{message.cmplx}}</td></tr> -->
+                               <!-- <tr> <td style="color:darkblue">cyclomatic complexity rank of file</td> <td style="color:red">{{message.rank}}</td></tr> -->
+                               <!-- <tr><th style="color:darkblue">cyclomatic complexity performance of file</th><td style="color:red">{{message.perf}}</td> </tr> -->
+							   <!-- <tr><th style="color:darkblue">Everything</th><td style="color:red">{{message.cco}}</td> </tr> -->
+							   
+								<!-- <tr><th style="color:darkblue">Name of the function</th><td style="color:red">{{message.functionName}}</td> </tr> -->
+								
+								<!-- <tr><th style="color:darkblue">Radon Analysis</th><td style="color:red">{{message.brr}}</td> </tr> -->
+								<!-- <tr><th style="color:darkblue">Radon Visitors</th><td style="color:red">{{message.v}}</td> </tr> -->
+								
+								<!-- <tr><th style="color:darkblue">Halstead Visitors</th><td style="color:red">{{message.hh}}</td> </tr> -->
+								<tr><th style="color:darkblue">Number of distinct operators (n1)</th><td style="color:black"><b>{{message.h1}}</td> </tr>
+								<tr><th style="color:darkblue">Number of distinct operands (n2)</th><td style="color:black"><b>{{message.h2}}</td> </tr>
+								<tr><th style="color:darkblue">Total number of operators (N1)</th><td style="color:black"><b>{{message.N1}}</td> </tr>
+								<tr><th style="color:darkblue">Total number of Operands (N2)</th><td style="color:black"><b>{{message.N2}}</td> </tr>
+								<tr><th style="color:darkblue">Halstead Program Vocabulary (n)</th><td style="color:black"><b>{{message.pv}}</td> </tr>
+								<tr><th style="color:darkblue">Halstead Program length (N)</th><td style="color:black"><b>{{message.l}}</td> </tr>
+								<tr><th style="color:darkblue">Calculated Length ( Nˆ )</th><td style="color:black"><b>{{message.l}}</td> </tr>
+								
+								<tr><th style="color:darkblue">Halstead Program Volume ( V )</th><td style="color:black"><b>{{message.vo}}</td> </tr>
+								<tr><th style="color:darkblue">Difficulty ( D )</th><td style="color:black"><b>{{message.d}}</td> </tr>
+								<tr><th style="color:darkblue">Efforts ( E )</th><td style="color:black"><b>{{message.e}}</td> </tr>
+								<tr><th style="color:darkblue">Time ( T )</th><td style="color:black"><b>{{message.t}}</td> </tr>
+								<tr><th style="color:darkblue">Bugs ( B )</th><td style="color:black"><b>{{message.b}}</b></td> </tr>
+								
+								<!-- <tr><th style="color:darkblue">Maintainability Index</th><td style="color:red">{{message.mi}}</td> </tr> -->
+								<tr><br><th style="color:darkblue">Cyclomatic Complexity</th><td style="color:red"><b>{{message.cyccom}}</td> </tr>
+								 <tr><th style="color:darkblue">Cyclomatic Complexity Rank</th><td style="color:red"><b>{{message.crank}}</td> </tr> 
+								<tr><th style="color:darkblue">Maintainability Index ( MI )</th><td style="color:red"><b>{{message.mi}}</td> </tr>
+								<tr><th style="color:darkblue">Maintainability Index Rank</th><td style="color:red"><b>{{message.mirank}}</td> </tr>
+								<!-- <tr><th style="color:darkblue">Halstead Program length</th><td style="color:red">{{message.hh}}</td> </tr> -->
+								<!-- <tr><th style="color:darkblue">Maintainability Index Parameters</th><td style="color:red">{{message.mip}}</td> </tr> -->
+								<!-- <tr><th style="color:darkblue">Name of the function with parameters</th><td style="color:red">{{message.functionLongName}}</td> </tr> -->
+
+								
+			
+          <div class="col-md-3 blog-sidebar">
+            <div class="row sidebar-module">
+			
+              <div class="col-md-offset-2 col-md-10">
+			   </table>
+			   
+    </div> 
+<script src="javascript.js"></script>
+    
+</body>
+
+<br><br>
+  
+<!-- <style> -->
+<!-- .new-category-title { -->
+    <!-- display: block; -->
+    <!-- margin-bottom: 10px; -->
+<!-- } -->
+
+<!-- #banner-general img { -->
+    <!-- width: 100%; -->
+    <!-- border-radius: 10px; -->
+    <!-- box-shadow: 0 5px 15px rgba(0,0,0,0.15); -->
+    <!-- transition: all 0.6s; -->
+<!-- } -->
+<!-- #banner-general:hover img { -->
+    <!-- transform: translateY(-2px); -->
+    <!-- box-shadow: 0 5px 25px rgba(0,0,0,0.3); -->
+<!-- } -->
+<!-- .card-label { -->
+    <!-- display: inline-block; -->
+    <!-- margin-left: 186px; -->
+    <!-- padding: 0px 6px; -->
+    <!-- text-align: center; -->
+    <!-- border-radius: 1020px; -->
+    <!-- -webkit-box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.2); -->
+    <!-- box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.2); -->
+    <!-- font-size: 12px; -->
+    <!-- position: absolute; -->
+    <!-- margin-top: 14px; -->
+    <!-- z-index: 10000; -->
+<!-- } -->
+<!-- </style> -->
+
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metric Check</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+</html> 
+<script>
+$(document).ready(function()
+{
+    $(".btn-group .btn").click(function()
+    {
+        var inputValue  =   $(this).find("input").val();
+        if(inputValue   != 'all')
+        {
+            var target  =   $('table tr[data-status="' + inputValue + '"]');
+            $("table tbody tr").not(target).hide();
+            target.fadeIn();
+        }
+        else
+        {
+            $("table tbody tr").fadeIn();
+        } 
+    });
+    // Changeing the class of status label to support bootstrap 4
+    var bs  =  $.fn.tooltip.Constructor.VERSION;
+    var support =   bs.split(".");
+    if(str[0]   ==  4)
+    {
+        $(".label").each(function()
+        {
+            var classStr    =   $(this).attr("class");
+            var newClassStr =   classStr.replace(/label/g, "badge");
+            $(this).removeAttr("class").addClass(newClassStr);
+        });
+    }
+	
+	<!-- $('.search').keyup(function(){ -->
+	<!-- var searchTerm = $(".search").val(); -->
+	<!-- var listItem = $('.results tbody').children('tr'); -->
+	<!-- var searchSplit = searchTerm.replace(/ /g, -->
+	
+});  
+</script>
+<style>  
+body {
+    color: #566787;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.table-wrapper {
+    width: 850px;
+    background: #fff;
+    padding: 20px 30px 5px;
+    margin: 30px auto;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.table-wrapper .btn-group {
+    float: right;
+}
+.table-title .btn {
+    min-width: 50px;
+    border-radius: 1px;
+    border: none;
+    padding: 6px 12px;
+    font-size: 95%;
+    outline: none !important;
+    height: 30px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.table-title {
+    border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 15px;
+    background: black;
+    margin: -20px -31px 10px;
+    padding: 15px 30px;
+    color: #fff;
+}
+.table-title h2 {
+    margin: 2px 0 0;
+    font-size: 24px;
+}
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+table.table tr th:first-child {
+    width: 40px;
+}
+table.table tr th:last-child {
+    width: 100px;
+}
+table.table-striped tbody tr:nth-last-of-type(odd) {
+    background-color: #fcfcfc;
+}
+table.table-striped.table-hover tbody tr:hover {
+    background: #f5f5f5;
+}
+table.table td a {
+    color: #2196f3;
+}
+table.table td .btn.manage {
+    padding: 2px 10px;
+    background: #37BC98;
+    color: #fff;
+    border-radius: 1px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
+}
+table.table td .btn.manage:hover {
+    background: #2e9c81;
+}
+</style>
+
+
+
+{% endblock %}
